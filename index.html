@@ -31,7 +31,31 @@ body{height:100svh}
 @keyframes greetingIn{to{opacity:1;transform:translateY(0)}}
 h1{font-size:clamp(17px,4.9vw,27px);line-height:1.35;color:#ffe5a0;margin:0;text-shadow:0 2px 12px #ff9e00}
 .message{font-size:clamp(14px,3.8vw,20px);line-height:1.5;margin:0;color:#fff7df}
-.from{font-size:clamp(12px,3.3vw,17px);line-height:1.35;color:#ffd46b;min-height:1.25em}
+.from {
+  font-size:clamp(12px,3.3vw,17px);
+  line-height:1.35;
+  background:linear-gradient(
+    90deg,
+    #fff4b0,
+    #ffd700,
+    #ffffff,
+    #e6a817,
+    #fff4b0
+  );
+  background-size:200% auto;
+  color:transparent;
+  -webkit-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
+  font-weight:bold;
+  text-shadow:0 0 10px #ffd70066;
+  animation:goldShine 3s linear infinite;
+  min-height:1.25em;
+}
+
+@keyframes goldShine {
+  to { background-position:200% center; }
+}
 .senderTools{width:100%;display:flex;flex-direction:column;gap:7px;opacity:1;transform:none}
 @keyframes toolsIn{to{opacity:1;transform:translateY(0)}}
 input[type=text]{width:100%;min-width:0;padding:10px 12px;border-radius:10px;border:1px solid #b88a3d;background:#fff9e9;color:#24152a;font-size:16px;outline:none;text-align:center}
